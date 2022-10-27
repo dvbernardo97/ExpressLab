@@ -10,10 +10,13 @@
 </head>
 
 <body>
-  <h1>Skills</h1>
+  <h1>My Dev skills</h1>
   <ul>
     <% todos.forEach(function(t) { %>
       <li>
+        <form action="/skills/<%= t.id %>?_method=DELETE" class="delete-form" method="POST">
+          <button type="submit">X</button>
+        </form>
         <a href="/skills/<%= t.id %>">
           <%= t.todo %>
         </a>
@@ -23,6 +26,7 @@
       </li>
       <% }); %>
   </ul>
+  <a href="/skills/new">Add New-Skill</a>
 </body>
 
 </html>
