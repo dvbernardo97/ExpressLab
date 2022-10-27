@@ -5,16 +5,8 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Todos</h1>
-    <ul>
-      <% todos.forEach(function(t) { %>
-        <li>
-          <%= t.todo %>
-            - 
-          <%= t.done ? 'done' : 'not done' %>
-        </li>
-      <% }); %>
-    </ul>
+    <h1><%= title %></h1>
+    <a href="/todos">To-Do List</a>
   </body>
-
 </html>
+
